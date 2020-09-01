@@ -1,7 +1,7 @@
 class Papers {
     constructor(x, y) {
         var options ={
-            'isStatic': true,
+            'isStatic': false,
             'restitution': 0.3,
             'friction': 0.5,
             'density': 1.2
@@ -13,8 +13,6 @@ class Papers {
     }
     display(){
       var pos =this.body.position;
-      pos.x= mouseX;
-      pos.y = mouseY;
       var angle = this.body.angle;
       push();
       translate(pos.x, pos.y);
@@ -22,7 +20,7 @@ class Papers {
       ellipseMode(RADIUS);
       //strokeWeight(5);
       //stroke("red");
-      fill(0,0,0);
+      fill(255);
       ellipse(0, 0, this.radius, this.radius);
       pop();
     }

@@ -44,5 +44,9 @@ function draw() {
   paperball.display();
 }
 
-
+function keyPressed() {
+	if (keyCode === UP_ARROW) {
+		Matter.Body.applyForce(paperball.body,paperball.body.position,{x:90,y:-90})
+	}
+}
 
